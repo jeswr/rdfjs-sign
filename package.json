@@ -25,10 +25,10 @@
     "url": ""
   },
   "keywords": [],
-  "author": "Jesse Wright <jesse.wright@anu.edu.au>",
+  "author": "Jesse Wright <jmwright.045@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/jeswr/rdfjs-sign/issues"
   },
   "homepage": "",
   "devDependencies": {

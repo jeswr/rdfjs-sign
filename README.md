@@ -8,7 +8,29 @@ A set of utilities for signing RDF.
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Usage
+```ts
+import { DataFactory } from 'n3';
+import {
+  generateKeyPair, exportKey, signQuads, verifyQuads, importKey,
+} from '@jeswr/rdfjs-sign';
 
+const { quad, namedNode } = DataFactory;
+
+const q1 = quad(namedNode('http://example.org/s'), namedNode('http://example.org/p'), namedNode('http://example.org/o1'));
+const q2 = quad(namedNode('http://example.org/s'), namedNode('http://example.org/p'), namedNode('http://example.org/o2'));
+const q3 = quad(namedNode('http://example.org/s'), namedNode('http://example.org/p'), namedNode('http://example.org/o3'));
+const keyPair = await generateKeyPair();
+const signature = await signQuads([q1, q2], keyPair.privateKey);
+
+// true
+await verifyQuads([q2, q1], signature, keyPair.publicKey);
+
+// false
+await verifyQuads([q1, q3], signature, keyPair.publicKey);
+
+// true
+await verifyQuads([q2, q1], signature, await importKey(await exportKey(keyPair.publicKey)));
+```
 ## License
 ©2024–present
 [Jesse Wright](https://github.com/jeswr),
