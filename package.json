@@ -24,13 +24,18 @@
     "type": "git",
     "url": "https://github.com/jeswr/rdfjs-sign"
   },
-  "keywords": [],
+  "keywords": [
+    "RDF",
+    "Signature",
+    "C14N",
+    "Canonicalization"
+  ],
   "author": "Jesse Wright <jmwright.045@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jeswr/rdfjs-sign/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/jeswr/rdfjs-sign#readme",
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/n3": "^1.16.4",
