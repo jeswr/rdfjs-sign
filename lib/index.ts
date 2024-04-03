@@ -1,4 +1,3 @@
-import { DataFactory } from 'n3';
 import { Quad } from '@rdfjs/types';
 import { RDFC10 } from 'rdfjs-c14n';
 import { subtle, webcrypto } from 'crypto';
@@ -14,7 +13,7 @@ const signParams = {
 };
 
 async function hashDataGraph(input: Iterable<Quad>) {
-  const rdfc10 = new RDFC10(DataFactory);
+  const rdfc10 = new RDFC10();
   const normalized = (await rdfc10.c14n(input)).canonicalized_dataset;
   const hash = await rdfc10.hash(normalized);
   return new TextEncoder().encode(hash);
