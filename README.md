@@ -1,5 +1,5 @@
 # RDFJS Sign
-A set of utilities for signing RDF.
+A set of utilities for signing RDF. :warning: Not for production use :warning:
 
 [![GitHub license](https://img.shields.io/github/license/jeswr/rdfjs-sign.svg)](https://github.com/jeswr/rdfjs-sign/blob/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/@jeswr/rdfjs-sign.svg)](https://www.npmjs.com/package/@jeswr/rdfjs-sign)
