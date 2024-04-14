@@ -12,7 +12,7 @@ export const signParams = {
   hash: 'SHA-512',
 };
 
-async function hashDataGraph(input: Iterable<Quad>) {
+export async function hashDataGraph(input: Iterable<Quad>) {
   const rdfc10 = new RDFC10();
   const normalized = (await rdfc10.c14n(input)).canonicalized_dataset;
   const hash = await rdfc10.hash(normalized);
