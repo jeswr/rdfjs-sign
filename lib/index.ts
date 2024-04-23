@@ -44,10 +44,18 @@ export function generateKeyPair() {
   return subtle.generateKey(keyParams, true, ['sign', 'verify']);
 }
 
+export function importPrivateKey(key: webcrypto.JsonWebKey) {
+  return subtle.importKey('jwk', key, keyParams, true, ['sign']);
+}
+
 export function importKey(key: string) {
   return subtle.importKey('raw', Buffer.from(key, 'base64'), keyParams, true, ['verify']);
 }
 
 export async function exportKey(key: CryptoKey) {
   return Buffer.from(await subtle.exportKey('raw', key)).toString('base64');
+}
+
+export async function exportPrivateKey(key: CryptoKey) {
+  return subtle.exportKey('jwk', key);
 }
