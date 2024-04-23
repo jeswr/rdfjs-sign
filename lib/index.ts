@@ -2,12 +2,12 @@ import { Quad } from '@rdfjs/types';
 import { RDFC10 } from 'rdfjs-c14n';
 import { subtle, webcrypto } from 'crypto';
 
-const keyParams = {
+export const keyParams = {
   name: 'ECDSA',
   namedCurve: 'P-384',
 };
 
-const signParams = {
+export const signParams = {
   name: keyParams.name,
   hash: 'SHA-512',
 };
