@@ -31,6 +31,18 @@ await verifyQuads([q1, q3], signature, keyPair.publicKey);
 // true
 await verifyQuads([q2, q1], signature, await importKey(await exportKey(keyPair.publicKey)));
 ```
+
+## CLI Usage
+To sign data with a private key
+```
+npx @jeswr/rdfjs-sign --private-key ./key.json --hash "abc123"
+```
+
+To sign a hash with a private key
+```
+npx @jeswr/rdfjs-sign --private-key ./key.json --data ./data.ttl
+```
+
 ## License
 ©2024–present
 [Jesse Wright](https://github.com/jeswr),
