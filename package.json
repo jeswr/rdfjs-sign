@@ -48,7 +48,7 @@
     "jest-mock-console": "^2.0.0",
     "n3": "^1.17.3",
     "pre-commit": "^1.2.2",
-    "semantic-release": "^23.0.6",
+    "semantic-release": "^24.0.0",
     "ts-jest": "^29.1.2",
     "typescript": "^5.4.3"
   },
